@@ -1,0 +1,311 @@
+/* 
+   Name: Ashley Elgar
+   Date: 11/23/2024
+   File Name: styles.css
+*/
+
+/* CSS Reset to ensure consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #F0F0F0; /* Light gray background */
+    padding: 10px;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1A1A2E; /* Deep Blue */
+    color: white;
+    padding: 20px 40px;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: #0056b3; /* Hover color */
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 4px;
+    width: 25px;
+    background-color: #FFF;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #1A1A2E;
+    color: #FFF;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #FFF;
+    background-color: #FF5722;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #E64A19;
+}
+
+/* Trainer Profile Section */
+.team-section {
+    padding: 50px 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.trainer-profile {
+    margin-bottom: 30px;
+}
+
+.trainer-profile figure {
+    max-width: 300px; /* Limit size of profile images */
+    margin: 0 auto;
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Trainer Profile Oval Styling */
+.trainer-profile img {
+    width: 200px; /* Limit the width of the image */
+    height: 250px; /* Adjust height to give an oval shape */
+    border-radius: 50% / 60%; /* Make the image oval */
+    object-fit: cover; /* Ensure the image fits well within the oval */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for emphasis */
+    margin-bottom: 15px; /* Add space between the image and the caption */
+}
+
+/* Content Sections */
+.services-section,
+.contact-section {
+    padding: 50px 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.services-section ul,
+.services-section ol {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #1A1A2E;
+    color: #FFF;
+}
+
+/* Footer */
+.footer {
+    background-color: #1A1A2E;
+    color: #FFF;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Additional Image Gallery */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.image-gallery img {
+    width: calc(33.33% - 20px); /* Three images per row with gap */
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .image-gallery img {
+        width: calc(50% - 20px); /* Two images per row for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-gallery img {
+        width: 100%; /* Single image per row for very small screens */
+    }
+}
+
+/* Styles for responsive videos */
+.responsive-video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Styling video highlight sections */
+.video-highlight, .service-video, .team-video {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.video-highlight h2, .service-video h2, .team-video h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* General image alignment styles */
+.centered-image {
+    display: block;
+    margin: 20px auto; /* Center horizontally and add spacing */
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.image-section img {
+    display: inline-block;
+    margin: 10px;
+    border-radius: 10px; /* Add rounded corners for aesthetic appeal */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for emphasis */
+}
+
+/* Fix for PumpkinWorkOut and GroupMarathonRun Images */
+.image-gallery img[src*="PumpkinWorkOut"],
+.image-gallery img[src*="GroupMarathonRun"] {
+    object-fit: contain; /* Prevent stretching by containing the image */
+    max-height: 400px; /* Limit height to fit the section better */
+    width: auto; /* Let the width adjust dynamically */
+    margin: 15px auto; /* Center image */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
